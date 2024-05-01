@@ -18,5 +18,10 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [{
+    pattern: /(bg|text|border)-neo(Red|Green|Purple|Blue|Yellow|Cyan|LightBlue|Pink|Orange|Brown)/
+  }
+
+  ]
 }
 

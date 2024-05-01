@@ -24,8 +24,8 @@ function Display({ list, deleteItem, editItem, completeItem, searchName, toggleM
                 <div className='min-w-40 mt-6 '>
 
                     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3 grid-cols-1'>
-                        {list.map((el, index) =>
-                            <Card key={el.id} className={`min-w-40 ${el.complete ? " bg-neoGreen " : `${"bg-" + el.color} `} flex flex-col text-left p-2 ease-linear delay-150 duration-400 transition `}>
+                        {list.map((el) =>
+                            <Card key={el.id} className={`min-w-40 ${el.complete ? " bg-neoGreen " : `bg-${el.color} `} flex flex-col text-left p-2 ease-linear delay-150 duration-400 transition `}>
                                 <div className=' max-h-7 mb-2 flex justify-between items-center'>
                                     <p className='font-bold text-2xl truncate'>
                                         {el?.title}
@@ -63,7 +63,6 @@ function Display({ list, deleteItem, editItem, completeItem, searchName, toggleM
                                     />
                                     {!el.complete ?
                                         <>
-
                                             <div className='flex gap-2'>
                                                 <img
                                                     className='cursor-pointer   hover:scale-125  '

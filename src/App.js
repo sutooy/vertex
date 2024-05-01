@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App bg-red-100  ">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
